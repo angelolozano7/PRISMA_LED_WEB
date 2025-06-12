@@ -1,6 +1,8 @@
 import logo from '../assets/logo_prisma.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function Registro() {
+  const navigate = useNavigate();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       
@@ -51,6 +53,12 @@ export default function Registro() {
           </div>
           <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-800">
             Registrarse
+          </button>
+          <button
+            onClick={() => navigate('/auth/login')}
+            className="w-full bg-violeta-medio text-white py-2 rounded hover:bg-violeta-oscuro transition"
+          >
+            Regresar
           </button>
         </div>
       </div>
